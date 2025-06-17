@@ -1,4 +1,4 @@
-FROM maven:3.9.9-eclipse-temurin-21-alpine AS build_image
+FROM maven:maven:3.9.9-eclipse-temurin-21-jammy AS build_image
 
 RUN git clone https://github.com/Rushi247/Ultimate-CICD.git
 WORKDIR /Ultimate-CICD/vprofile-project
