@@ -1,6 +1,6 @@
 FROM maven:3.9.9-eclipse-temurin-21-jammy AS BUILD_IMAGE
 RUN git clone https://github.com/Rushi247/Ultimate-CICD.git
-RUN cd vprofile-project && mvn clean install
+RUN cd Ultimate-CICD/vprofile-project && mvn clean install
 
 FROM tomcat:10-jdk21
 
