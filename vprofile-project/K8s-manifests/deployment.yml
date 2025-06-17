@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vprofile-app
+  labels:
+    app: vprofile-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vprofile-app
+  template:
+    metadata:
+      labels:
+        app: vprofile-app
+    spec:
+      containers:
+      - name: vprofile-app
+        image: rushikesh17/ultimate-cicd:replaceImageTag
+        ports:
+        - containerPort: 8080
